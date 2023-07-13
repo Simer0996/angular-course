@@ -6,6 +6,13 @@ class="form-control"
 [(ngModel)]="ServerName">
 <!-- <p>{{ServerName}}</p> -->
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
-<p>{{serverCreationStatus}}</p>
+<!-- <p>{{serverCreationStatus}}</p> -->
+
+<!-- following a syntax of one of directives in angular ngIf -->
+<p *ngIf="ServerCreated; else noServer">Server was created, server name is {{ServerName}}</p>
+<ng-template #noServer>
+    <p>No Server Created</p>
+</ng-template>
+
 <app-server></app-server>
 <app-server></app-server>
