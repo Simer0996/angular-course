@@ -5,3 +5,16 @@
   <button (click)="disableButton()" >Click to disable or enable the button</button>
 </div>
 <p [hidden] = "show">Click me works</p>
+
+
+<!-- ngIf Directive Practice -->
+<p *ngIf="show;else elseLadder ">This is awesome functionality</p>
+<ng-template #elseLadder>
+  <div>
+    <ul>
+      <li>Wow more conditions</li>
+      <li>Wow 1 more condition</li>
+      <li>Wow 2 more conditions</li>
+    </ul>
+  </div>
+</ng-template>
