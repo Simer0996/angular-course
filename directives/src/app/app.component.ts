@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'directives';
+  show = false;
+  disable = false;
+
+  showContent(){
+    this.show = !this.show;
+  }
+
+  disableButton(){
+    this.disable = !this.disable;
+  }
 }
