@@ -1,8 +1,0 @@
-{
-  "devDependencies": {
-    "tslib": "^2.6.0"
-  },
-  "dependencies": {
-    "@angular/core": "^16.1.5"
-  }
-}
