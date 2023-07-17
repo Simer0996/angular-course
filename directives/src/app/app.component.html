@@ -36,8 +36,11 @@
 </div>
 
 <!-- ngFor Directive Practice -->
+<button (click)="AddNewCourse()">Add Course</button>
+
 <ul>
   <li *ngFor="let course of courses; even as isEven">
-  {{course.name}} <span *ngIf="isEven">(Even)</span>
+  {{course.name}}
+  <button (click)="onRemove(course)">Remove</button>
   </li>
 </ul>

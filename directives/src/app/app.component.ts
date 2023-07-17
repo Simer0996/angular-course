@@ -24,4 +24,13 @@ export class AppComponent {
     this.viewMode = mode;
   }
   courses = [{id:1,name:"course1"},{id:2,name:"course2"},{id:3,name:"course3"}]
+
+  AddNewCourse(){
+    this.courses.push({id:4,name:"course4"})
+  }
+
+  onRemove(course: { id: number; name: string; }){
+    let index = this.courses.indexOf(course);
+    this.courses.splice(index,1);
+  }
 }
