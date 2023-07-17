@@ -21,13 +21,17 @@
 
 <!-- ngSwitch Directive Practice -->
 <ul class="nav nav-pills">
-  <li class="active"><a href="">Map View</a></li>
-  <li><a href=""></a>List View</li>
+  <li [class.active]="viewMode == 'map'"><button (click)="setViewMode('map')">Map View</button></li>
+  <li [class.active]="viewMode == 'list'"><button (click)="setViewMode('list')">List View</button></li>
 </ul>
-<div>
-  <div>
+<div [ngSwitch] = "viewMode">
+  <div *ngSwitchCase="'map'">
     Map view content
   </div>
-  <div>
+  <div *ngSwitchCase="'list'">
     List view content
+</div>
+<div *ngSwitchDefault>
+  Otherwise map view content
+</div>
 </div>

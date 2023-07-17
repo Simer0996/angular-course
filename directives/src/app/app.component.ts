@@ -17,4 +17,10 @@ export class AppComponent {
   disableButton(){
     this.disable = !this.disable;
   }
+
+  viewMode = 'map';
+
+  setViewMode(mode: string){
+    this.viewMode = mode;
+  }
 }
