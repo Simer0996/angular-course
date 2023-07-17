@@ -5,7 +5,6 @@
 </div>
 <p [hidden]="show">Click me works</p>
 
-
 <!-- ngIf Directive Practice -->
 <p *ngIf="show;else elseLadder ">This is awesome functionality</p>
 <ng-template #elseLadder>
@@ -20,8 +19,8 @@
 
 <!-- ngSwitch Directive Practice -->
 <ul class="nav nav-pills">
-  <li [class.active]="viewMode == 'map'"><button (click)="setViewMode('map')">Map View</button></li>
-  <li [class.active]="viewMode == 'list'"><button (click)="setViewMode('list')">List View</button></li>
+  <li [class.active]="viewMode == 'map'"><button [ngStyle]="viewMode == 'map' ? {color:'white',backgroundColor:'red'}: {color:'black',backgroundColor:'white'}" (click)="setViewMode('map')">Map View</button></li>
+  <li [class.active]="viewMode == 'list'"><button [ngStyle]="viewMode == 'list' ? {color:'white',backgroundColor:'red'}: {color:'black',backgroundColor:'white'}" (click)="setViewMode('list')">List View</button></li>
 </ul>
 <div [ngSwitch]="viewMode">
   <div *ngSwitchCase="'map'">
